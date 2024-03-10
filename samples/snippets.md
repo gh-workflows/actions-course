@@ -20,7 +20,7 @@ Matrix strategy:
     ${{ matrix.node-version }} - 
     This expression uses the matrix context to get the current Node.js version in a matrix strategy.
 
-## Examples of the expressions and contexts function in github actions.
+## Examples of expressions and contexts funtion in gitGitHubhub actions.
 
 In this context example, the `github.event_name` expression accesses the `event_name` property of the github context, which contains the name of the event that triggered the workflow. The echo command then prints a message that includes this event name.
 
