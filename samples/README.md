@@ -3,7 +3,7 @@
 Copy a sample of interest into the .github/workflows folder.
 
 
-## Examples of the expressions and contexts function in github actions.
+## Snippets of expressions and contexts in GitHub Actions.
 
 In this context example, the `github.event_name` expression accesses the `event_nam`e property of the github context, which contains the name of the event that triggered the workflow. The echo command then prints a message that includes this event name.
 
