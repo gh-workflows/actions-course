@@ -25,5 +25,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print the input tag to STDOUT
+      - name: Print the log level tag to STDOUT
+        run: echo  "The log level is ${{ github.event.inputs.logLevel }} "
+
+      - name: Print the tag to STDOUT
         run: echo  "The tag is ${{ github.event.inputs.tags }} "
