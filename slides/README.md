@@ -293,7 +293,7 @@
   
 [CodeQL](https://github.com/github/codeql)
 
-(CRON Helper)[https://cron.help/]
+[CRON Helper](https://cron.help/)
 
 </details>
 
