@@ -23,7 +23,7 @@ Matrix strategy:
 
 ## Examples of expressions and contexts in GitHub Actions.
 
-Example of the success function in github actions.
+Example of the `success()` function in github actions.
 
     jobs:
         build:
@@ -31,31 +31,17 @@ Example of the success function in github actions.
 
             steps:
             - name: Checkout code
-            uses: actions/checkout@v2
+              uses: actions/checkout@v2
 
             - name: Run tests
-            run: make test
+              run: make test
 
-            - name: Notify on success
-            if: success()
-            run: echo "Tests passed successfully!"
+            - name: Notify only on success
+              if: success()
+              run: echo "Tests passed successfully!"
 
 
-Example of the contains() function in github actions.
-
-    jobs:
-        build:
-            runs-on: ubuntu-latest
-
-            steps:
-            - name: Checkout code
-            uses: actions/checkout@v2
-
-            - name: Run only if commit message contains 'test'
-            run: echo "Running tests..."
-            if: contains(github.event.head_commit.message, 'test')
-
-Example of the contains() function in github actions.
+Example of the `contains()` function in github actions.
 
     jobs:
         build:
@@ -63,10 +49,24 @@ Example of the contains() function in github actions.
 
             steps:
             - name: Checkout code
-            uses: actions/checkout@v2
+              uses: actions/checkout@v2
+
+            - name: Notify only if commit message contains 'test'
+              run: echo "Running tests..."
+              if: contains(github.event.head_commit.message, 'test')
+
+Example of the `join()` function in github actions.
+
+    jobs:
+        build:
+            runs-on: ubuntu-latest
+
+            steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
 
             - name: Join strings
-            run: echo "${{ join(['Hello', 'GitHub', 'Actions'], ' ') }}"
+              run: echo "${{ join(['Hello', 'GitHub', 'Actions'], ' ') }}"
 
 In this context example, the `github.event_name` expression accesses the `event_name` property of the github context, which contains the name of the event that triggered the workflow. The echo command then prints a message that includes this event name.
 
@@ -78,10 +78,10 @@ There are several other contexts available in GitHub Actions, including `job`, `
 
             steps:
             - name: Checkout code
-            uses: actions/checkout@v2
+              uses: actions/checkout@v2
 
             - name: Print event name
-            run: echo "This workflow was triggered by a ${{ github.event_name }} event."
+              run: echo "This workflow was triggered by a ${{ github.event_name }} event."
 
 Example of a `matrix` in github actions. The strategy block defines a `matrix strategy`. A `matrix strategy` allows you to run the job multiple times with different configurations. In this case, the `matrix strategy` is used to run the job on three different versions of Node.js: 12.x, 14.x, and 16.x. The job will run once for each version specified in the matrix.
 
@@ -95,15 +95,15 @@ Example of a `matrix` in github actions. The strategy block defines a `matrix st
 
             steps:
             - name: Checkout code
-            uses: actions/checkout@v2
+              uses: actions/checkout@v2
 
             - name: Use Node.js ${{ matrix.node-version }}
-            uses: actions/setup-node@v2
-            with:
+              uses: actions/setup-node@v2
+              with:
                 node-version: ${{ matrix.node-version }}
 
             - name: Install dependencies
-            run: npm ci
+              run: npm ci
 
             - name: Run tests
-            run: npm test
+              run: npm test
