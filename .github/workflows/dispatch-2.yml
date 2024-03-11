@@ -1,7 +1,7 @@
 # When using the workflow_dispatch event, you can optionally specify inputs that are passed to the workflow.
 # The triggered workflow receives the inputs in the github.event.inputs context. 
 
-name: workflow_dispatch_event
+name: Dispatch Demo
 
 on:
   workflow_dispatch:
