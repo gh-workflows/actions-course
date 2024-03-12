@@ -35,6 +35,6 @@ jobs:
       run: echo "Hello ${{ vars.USER }}"
 
     - name: passkey from dev
-      run: echo "Hello ${{ SECRETS.PASSKEY }}"
+      run: echo "Hello ${{ secrets.PASSKEY }}"
 
       
