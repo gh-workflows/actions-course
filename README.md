@@ -4,3 +4,4 @@
 2) Name the repository actions-course-\<_your GitHub handle_\>.
 3) Set the visibility to `public` for personal accounts, `internal` for corporate.
 
+[![Manual workflow](https://github.com/gh-workflows/actions-course/actions/workflows/from-gh.yml/badge.svg)](https://github.com/gh-workflows/actions-course/actions/workflows/from-gh.yml)
