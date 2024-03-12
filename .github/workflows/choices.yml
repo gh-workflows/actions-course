@@ -1,4 +1,4 @@
-name: sample action
+name: Choices
 
 on:
   push:
