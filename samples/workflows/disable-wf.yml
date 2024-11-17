@@ -1,3 +1,15 @@
+# This GitHub Actions workflow disables a specified workflow using a manual dispatch.
+# 
+# Inputs:
+# - workflow_name: A required text box for the user to enter the name of the workflow to disable.
+#
+# Details:
+# - The workflow uses the GitHub CLI (gh) and jq to find and disable the specified workflow.
+# - It includes error handling to echo a message on success or failure.
+#
+# Error handling:
+# - Echo a message on success or failure.
+
 name: Disable Workflow
 
 on:
