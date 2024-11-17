@@ -25,8 +25,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Set up GitHub CLI
+      run: sudo apt-get install gh jq
+
     - name: Disable specified workflow
       id: disable
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         WORKFLOW_NAME="${{ github.event.inputs.workflow_name }}"
         WORKFLOW_ID=$(gh api repos/${{ github.repository }}/actions/workflows | jq -r ".workflows[] | select(.name==\"${WORKFLOW_NAME}\") | .id")
