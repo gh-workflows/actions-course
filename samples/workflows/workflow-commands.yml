@@ -1,6 +1,8 @@
 name: Example Workflow
 
-on: [push]
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,7 +16,7 @@ jobs:
       id: step1
       run: echo "currentDateTime=$(date)" >> $GITHUB_OUTPUT
 
-    - name: Output the values
+    - name: Output the values referenced by the environment variable $GITHUB_OUTPUT
       run: echo "The current date and time is ${{ steps.step1.outputs.currentDateTime }}"
 
     - name: Set warning and notice messages
