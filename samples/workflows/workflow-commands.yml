@@ -31,4 +31,3 @@ jobs:
         echo "::warning::${{ steps.messages.outputs.warningMessage }}"
         echo "::notice::${{ steps.messages.outputs.noticeMessage }}"
         echo "::endgroup::"
-```
