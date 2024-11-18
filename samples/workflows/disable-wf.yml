@@ -9,6 +9,10 @@
 #
 # Error handling:
 # - Echo a message on success or failure.
+#
+# Requirements:
+# - Install the GitHub CLI (gh) and jq.
+# - Seet up an environment variable GH_TOKEN with a GitHub token.
 
 name: Disable Workflow
 
