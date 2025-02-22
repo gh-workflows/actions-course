@@ -4,7 +4,7 @@ In this session, we are going to be deploying an application within a **Docker**
 
 ## Exercise: Review Dockerfile
 
-In this exercise, you will review the Dockerfile found in the root directory and make any necessary changes.
+In this exercise, you will review the Dockerfile found in the 'labs' directory and make any necessary changes. Copy the changes into the root folder when done.
 
       > **:warning: NOTE:** Update the **orgname** and **reponame** variables to your organization and repository names.
 
