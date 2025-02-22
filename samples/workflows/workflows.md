@@ -1,5 +1,8 @@
 This file provides descriptions of various GitHub Actions workflows used in the repository.
 
+## artifacts.yml
+This sample workflow uploads and downloads artifacts. It includes jobs to upload the `README.md` file as an artifact and then download it in a subsequent job.
+
 ## caching.yml
 This workflow sets up caching for Node.js modules to speed up the build process.
 
@@ -57,6 +60,7 @@ This workflow runs a shell script on a specified runner.
 
 ## workflow-commands.yml
 This workflow demonstrates the use of workflow commands to interact with GitHub Actions.
+
 
 
 
