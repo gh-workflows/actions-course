@@ -1,3 +1,7 @@
+# This workflow creates a GitHub release when a new tag is pushed to the repository.
+# It uses the GitHub CLI to create the release.
+# As an alternative use https://github.com/softprops/action-gh-release
+
 name: Create Release
 
 on:
