@@ -31,11 +31,17 @@ This workflow creates and updates a GitHub issue using GitHub Actions and the `a
 ## if-condition.yml
 This workflow runs on push, pull request, or workflow dispatch events. It includes steps to run scripts based on the event type, including handling multi-line scripts.
 
+## issue-labeler.yml
+This workflow labels issues based on the keywords specified in the `labeler.yml` configuration file. For example, if an issue contains the word "bug" or "error", it will be labeled as a "bug". The workflow triggers on issue creation or editing.
+
 ## matrix-setup-node.yml
 This workflow sets up a matrix build for Node.js versions 12.x, 14.x, and 16.x, and runs tests on each version.
 
 ## minimal-docker.yml
 This workflow sets up a minimal Docker environment to build and run a Docker container.
+
+## pr-build.yml
+This workflow runs on pull requests to the main branch. It includes jobs to build and test the code, and to run a linter.
 
 ## sync-jobs.yml
 This workflow synchronizes jobs across multiple repositories to ensure consistency and up-to-date configurations.
